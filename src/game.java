@@ -1,6 +1,11 @@
 import java.util.Random;
 
 public class game {
+    /**
+     * @return boolean[] doors
+     * @description Returns an array of three doors, one of which is true.
+     * true = prize, false = no prize
+     */
     private static final Random random = new Random();
     public static boolean[] doors() {
         boolean[] doors = {false, false, false};
@@ -8,19 +13,19 @@ public class game {
         return doors;
     }
 
-    public static int chooseDoor(boolean[] doors) {
+    /**
+     * @return int chooseDoor
+     * @description Returns a random number between 0 and 2.
+     * 0 = door 1, 1 = door 2, 2 = door 3
+     */
+    public static int chooseDoor() {
         return random.nextInt(3);
     }
 
     public static int openDoor(boolean[] doors, int chooseDoor) {
-        if (chooseDoor == 0) {
-            return random.nextInt(2) + 1;
-        } else if (chooseDoor == 1) {
-            int rand = random.nextInt(2);
-            return (rand == 0) ? 0 : 2;
-        } else if (chooseDoor == 2) {
-            return random.nextInt(2);
-        }
-        return - 1;
+        boolean[] gameDoors = doors;
+        int openDoor = chooseDoor;
+
+
     }
 }
