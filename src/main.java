@@ -6,13 +6,13 @@ public class main {
      * Behind the other two doors are nothing. You choose a door. The host, who knows
      * where the prize is, opens one of the other doors, revealing nothing. The host then
      * asks you if you want to switch your choice to the other door. Should you switch?
-     * Main runs the game a million times, and prints the results.
+     * Main runs the game ten million times, and prints the results.
      * @param args
      */
     public static void main(String[] args) {
         int stayWins = 0;
         int switchWins = 0;
-        int iterations = 1000000;
+        int iterations = 10000000;
         for (int i = 0; i < iterations; i++) {
             if (stayPrize.stayWin()) {
                 stayWins++;
@@ -21,8 +21,6 @@ public class main {
                 switchWins++;
             }
         }
-        System.out.println("Stay wins: " + stayWins);
-        System.out.println("Switch wins: " + switchWins);
         System.out.println("Stay win percentage: " + (double) stayWins / iterations * 100 + "%");
         System.out.println("Switch win percentage: " + (double) switchWins / iterations * 100 + "%");
     }
