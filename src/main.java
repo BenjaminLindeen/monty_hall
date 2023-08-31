@@ -1,4 +1,14 @@
-public class Main {
+public class main {
+    /**
+     * @description Used to test the Monty Hall problem.
+     * The Monty Hall problem is a probability puzzle that goes like this:
+     * You are on a game show. There are three doors. Behind one of the doors is a prize.
+     * Behind the other two doors are nothing. You choose a door. The host, who knows
+     * where the prize is, opens one of the other doors, revealing nothing. The host then
+     * asks you if you want to switch your choice to the other door. Should you switch?
+     * Main runs the game a million times, and prints the results.
+     * @param args
+     */
     public static void main(String[] args) {
         int stayWins = 0;
         int switchWins = 0;

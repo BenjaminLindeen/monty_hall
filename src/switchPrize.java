@@ -1,15 +1,23 @@
 public class switchPrize {
+    /**
+     * @description Returns true if the player wins by switching to another door.
+     * @return boolean switchWin
+     */
     public static boolean switchWin() {
         boolean[] doors = game.doors();
         int chooseDoor = game.chooseDoor();
-        int openDoor = game.openDoor(doors, chooseDoor);
-        if (openDoor == 0) {
-            chooseDoor = (chooseDoor == 1) ? 2 : 1;
-        } else if (openDoor == 1) {
-            chooseDoor = (chooseDoor == 0) ? 2 : 0;
-        } else if (openDoor == 2) {
-            chooseDoor = (chooseDoor == 0) ? 1 : 0;
+        boolean door1 = doors[0];
+        boolean door2 = doors[1];
+        boolean door3 = doors[2];
+
+        if (chooseDoor == 0 && door1) {
+            return false;
+        } else if (chooseDoor == 1 && door2) {
+            return false;
+        } else if (chooseDoor == 2 && door3) {
+            return false;
+        } else {
+            return true;
         }
-        return doors[chooseDoor];
     }
 }

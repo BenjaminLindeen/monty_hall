@@ -21,11 +21,4 @@ public class game {
     public static int chooseDoor() {
         return random.nextInt(3);
     }
-
-    public static int openDoor(boolean[] doors, int chooseDoor) {
-        boolean[] gameDoors = doors;
-        int openDoor = chooseDoor;
-
-
-    }
 }
