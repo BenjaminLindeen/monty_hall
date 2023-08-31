@@ -14,7 +14,7 @@ Is it in your best interest to stay or switch?
 
 ## Simulation Overview
 
-This program runs the Monty Hall scenario a million times to determine which strategy – staying or switching – wins more often.
+This program runs the Monty Hall scenario ten million times to determine which strategy – staying or switching – wins more often.
 
 ## Features
 
